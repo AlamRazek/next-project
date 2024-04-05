@@ -1,9 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutPage = () => {
   return (
     <div>
-      <h2>about +page is here</h2>
+      <div className="relative  w-[100%] h-96 ">
+        <Image src="/about.png" alt="" fill></Image>
+      </div>
     </div>
   );
 };
