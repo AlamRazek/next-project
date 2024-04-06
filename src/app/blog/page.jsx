@@ -1,9 +1,13 @@
+import PostCard from "@/components/postCard/postCard";
 import React from "react";
 
 const blogPage = () => {
   return (
-    <div>
-      <h2>Blog Page</h2>
+    <div className="">
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
     </div>
   );
 };
