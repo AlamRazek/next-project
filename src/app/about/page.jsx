@@ -29,11 +29,12 @@ const AboutPage = () => {
             We create digital ideas that are bigger,bolder, braver and better.
           </h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            We create digital ideas that are bigger, bolder, braver and better.
+            We believe in good ideas flexibility and precission We’re world’s
+            Our Special Team best consulting & finance solution provider. Wide
+            range of web and software development services.
           </p>
-          <div className="stats  bg-transparent border-none text-blue-700">
+          <div className="stats  bg-transparent border-none flex flex-col md:flex-row ">
             <div className="stat">
               <div className="stat-figure text-secondary">
                 <svg
@@ -50,9 +51,9 @@ const AboutPage = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">Downloads</div>
-              <div className="stat-value">31K</div>
-              <div className="stat-desc">Jan 1st - Feb 1st</div>
+
+              <div className="stat-value text-[#3673fd]">10 k+</div>
+              <div className="stat-desc text-white">Years of experience</div>
             </div>
 
             <div className="stat">
@@ -71,9 +72,9 @@ const AboutPage = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">New Users</div>
-              <div className="stat-value">4,200</div>
-              <div className="stat-desc">↗︎ 400 (22%)</div>
+
+              <div className="stat-value text-[#3673fd]">4,200</div>
+              <div className="stat-desc text-white">People reached</div>
             </div>
 
             <div className="stat">
@@ -92,9 +93,11 @@ const AboutPage = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">New Registers</div>
-              <div className="stat-value">1,200</div>
-              <div className="stat-desc">↘︎ 90 (14%)</div>
+
+              <div className="stat-value text-[#3673fd]">1,200</div>
+              <div className="stat-desc text-white my-1">
+                Services and plugins
+              </div>
             </div>
           </div>
         </div>
