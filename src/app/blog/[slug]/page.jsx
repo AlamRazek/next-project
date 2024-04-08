@@ -19,6 +19,10 @@ const SinglePostPage = () => {
             alt=""
             fill
           />
+          <div>
+            <span className="">Author</span>
+            <span className="">Date</span>
+          </div>
         </div>
       </div>
     </div>
