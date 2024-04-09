@@ -11,9 +11,9 @@ const SinglePostPage = () => {
           className="object-cover"
         />
       </div>
-      <div className="flex-[2] flex-col gap-12 ">
+      <div className="flex-[2] flex flex-col gap-12 ">
         <h1 className="text-6xl">Title</h1>
-        <div className="flex flex-col gap-2">
+        <div className="flex  gap-5">
           <Image
             src="https://images.pexels.com/photos/17894070/pexels-photo-17894070/free-photo-of-ring-tailed-lemur-sitting-on-a-fence.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
@@ -21,11 +21,11 @@ const SinglePostPage = () => {
             width={50}
             className="object-cover rounded-[50%] "
           />
-          <div className="">
+          <div className="flex flex-col gap-2">
             <span className="">Author</span>
             <span className="">Terry Jefferson</span>
           </div>
-          <div className="">
+          <div className="flex flex-col gap-2">
             <span className="">Published</span>
             <span className="">01.01.2024</span>
           </div>
