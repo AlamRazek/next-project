@@ -3,12 +3,12 @@ import Image from "next/image";
 const SinglePostPage = () => {
   return (
     <div className="flex gap-24">
-      <div className="flex-1  relative h-[calc(100vh-200px)]">
+      <div className="flex-1 lg:block hidden relative h-[calc(100vh-200px)]">
         <Image
           src="https://images.pexels.com/photos/3912838/pexels-photo-3912838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
           layout="fill"
-          className="object-cover lg:block hidden"
+          className="object-cover "
         />
       </div>
       <div className="flex-[2] flex flex-col gap-12 ">
@@ -19,7 +19,7 @@ const SinglePostPage = () => {
             alt=""
             height={50}
             width={50}
-            className="object-cover rounded-[50%] hidden lg:block"
+            className="object-cover rounded-[50%] "
           />
           <div className="flex flex-col gap-2">
             <span className="text-gray-300 font-bold">Author</span>
