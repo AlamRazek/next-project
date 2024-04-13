@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="hero min-h-screen  text-white">
       <div className="hero-content  flex-col lg:flex-row-reverse ">
-        <div className="bg-transparent ">
+        <div className=" ">
           <Image src="/hero.gif" alt="" width="500" height="500" className="" />
         </div>
         <div className="lg: w-[50%]">

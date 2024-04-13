@@ -5,9 +5,16 @@ const AboutPage = () => {
   return (
     <div className="hero min-h-screen ">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <Image src="/about.png" height="500" width="500" />
+        <Image
+          src="/about.png"
+          width={500}
+          height={500}
+          alt=""
+          className="object-cover"
+        />
+
         <div className="lg:max-w-[50%]">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-3xl lg:text-5xl font-bold">
             {" "}
             We create digital ideas that are bigger,bolder, braver and better.
           </h1>
