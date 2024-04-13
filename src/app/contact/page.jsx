@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
@@ -10,7 +11,7 @@ const ContactPage = () => {
           alt=""
           height={500}
           width={500}
-          className="object-contain w-full h-auto"
+          className="object-contain "
         />
       </div>
       <div className="flex-1 ">
@@ -38,7 +39,10 @@ const ContactPage = () => {
             placeholder="Message"
             className="p-5 rounded border-none outline-none bg-[#2d2b42] text-white"
           ></textarea>
-          <button className="text-white bg-[#3673fd]  rounded my-2 py-1 font-bold border-none">
+          <button
+            onClick={() => console.log("hello")}
+            className="text-white bg-[#3673fd]  rounded my-2 py-1 font-bold border-none"
+          >
             Send
           </button>
         </form>
