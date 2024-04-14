@@ -1,6 +1,9 @@
-"use client";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import React from "react";
+
+const HydrationTestNoSSR = dynamic(() => import("@/components/hydrationTest"), {
+  ssr: false,
+});
 
 const ContactPage = () => {
   return (
@@ -14,7 +17,8 @@ const ContactPage = () => {
           className="object-contain "
         />
       </div>
-      <div className="flex-1 ">
+      <div className="flex-1">
+        <HydrationTestNoSSR />
         <form action="" className="flex flex-col gap-5 ">
           <input
             type="text"
@@ -39,10 +43,7 @@ const ContactPage = () => {
             placeholder="Message"
             className="p-5 rounded border-none outline-none bg-[#2d2b42] text-white"
           ></textarea>
-          <button
-            onClick={() => console.log("hello")}
-            className="text-white bg-[#3673fd]  rounded my-2 py-1 font-bold border-none"
-          >
+          <button className="text-white bg-[#3673fd]  rounded my-2 py-1 font-bold border-none">
             Send
           </button>
         </form>

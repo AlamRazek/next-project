@@ -83,7 +83,11 @@ const Navbar = () => {
         <div className="navbar-end">
           {session ? (
             <>
-              {isAdmin && <Link href="/admin">Admin</Link>}
+              {isAdmin && (
+                <Link href="/admin" className="lg:mr-4 font-bold ">
+                  Admin
+                </Link>
+              )}
               <button className="px-2 py-1 rounded cursor-pointer font-bold text-black bg-white">
                 Logout
               </button>
