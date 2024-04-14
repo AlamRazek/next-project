@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -59,16 +60,7 @@ const Navbar = () => {
             >
               {links.map(({ title, path }) => (
                 <li key={title}>
-                  <Link
-                    href={path}
-                    className={`${
-                      pathName === path
-                        ? "bg-white rounded-full text-black px-3 py-1"
-                        : ""
-                    }`}
-                  >
-                    {title}
-                  </Link>
+                  <Link href={path}>{title}</Link>
                 </li>
               ))}
             </ul>
