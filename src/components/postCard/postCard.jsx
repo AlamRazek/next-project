@@ -14,7 +14,7 @@ const PostCard = () => {
           />
         </div>
         <span className="text-sm transform rotate-[270deg] m-auto">
-          01.01.2024
+          01/01/2024
         </span>
       </div>
       <div>
