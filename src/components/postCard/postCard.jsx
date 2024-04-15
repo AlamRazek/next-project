@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PostCard = () => {
+const PostCard = ({ post }) => {
   return (
     <div className="flex flex-col gap-5 mb-5">
       <div className="flex">
@@ -18,14 +18,8 @@ const PostCard = () => {
         </span>
       </div>
       <div>
-        <h1 className="text-xl font-bold mb-5 w-[85%]">Title</h1>
-        <p className="mb-5 font-light text-gray-400 w-[85%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo
-          provident quasi maxime suscipit ab? Corporis praesentium, nihil
-          aliquid sint perferendis at neque nemo, reiciendis quia esse ducimus
-          perspiciatis? Ipsa culpa quia id? Excepturi nulla tempore ut vel!
-          Eius, officiis!
-        </p>
+        <h1 className="text-xl font-bold mb-5 w-[85%]">{post.title}</h1>
+        <p className="mb-5 font-light text-gray-400 w-[85%]">{post.body}</p>
         <Link href="/blog/post" className="underline">
           Read More
         </Link>

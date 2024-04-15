@@ -2,7 +2,9 @@ import PostCard from "@/components/postCard/postCard";
 import React from "react";
 
 const getData = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  });
   if (!res.ok) {
     throw new Error("Something went wrong");
   }
@@ -11,22 +13,15 @@ const getData = async () => {
 };
 
 const blogPage = async () => {
-  const post = await getData();
+  const posts = await getData();
 
   return (
     <div className="flex flex-wrap gap-5">
-      <div className="w-full md:w-[45%] xl:w-[30%]">
-        <PostCard />
-      </div>
-      <div className="w-full md:w-[45%] xl:w-[30%]">
-        <PostCard />
-      </div>
-      <div className="w-full md:w-[45%] xl:w-[30%]">
-        <PostCard />
-      </div>
-      <div className="w-full md:w-[45%] xl:w-[30%]">
-        <PostCard />
-      </div>
+      {posts.map((post) => (
+        <div key={post.id} className="w-full md:w-[45%] xl:w-[30%]">
+          <PostCard post={post} />
+        </div>
+      ))}
     </div>
   );
 };
