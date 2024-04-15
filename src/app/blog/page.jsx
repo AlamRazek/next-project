@@ -1,7 +1,18 @@
 import PostCard from "@/components/postCard/postCard";
 import React from "react";
 
-const blogPage = () => {
+const getData = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+
+  return res.json();
+};
+
+const blogPage = async () => {
+  const post = await getData();
+
   return (
     <div className="flex flex-wrap gap-5">
       <div className="w-full md:w-[45%] xl:w-[30%]">
