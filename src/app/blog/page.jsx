@@ -2,7 +2,7 @@ import PostCard from "@/components/postCard/postCard";
 import React from "react";
 
 const getData = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {});
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   if (!res.ok) {
     throw new Error("Something went wrong");
   }

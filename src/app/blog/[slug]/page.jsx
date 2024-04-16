@@ -1,6 +1,18 @@
 import Image from "next/image";
 
-const SinglePostPage = () => {
+const getData = async (slug) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+
+  return res.json();
+};
+
+const SinglePostPage = async ({ params }) => {
+  const { slug } = params;
+  const post = await getData(slug);
+
   return (
     <div className="flex gap-24">
       <div className="flex-1 lg:block hidden relative h-[calc(100vh-200px)]">
@@ -12,7 +24,7 @@ const SinglePostPage = () => {
         />
       </div>
       <div className="flex-[2] flex flex-col gap-12 ">
-        <h1 className="text-6xl">Title</h1>
+        <h1 className="text-6xl">{post.title}</h1>
         <div className="flex   gap-5">
           <Image
             src="https://images.pexels.com/photos/17894070/pexels-photo-17894070/free-photo-of-ring-tailed-lemur-sitting-on-a-fence.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -30,13 +42,7 @@ const SinglePostPage = () => {
             <span className="">01.01.2024</span>
           </div>
         </div>
-        <div className="text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          reprehenderit ratione fuga alias ab placeat nihil illo quia adipisci,
-          voluptatibus laborum! Quisquam obcaecati nemo saepe consequuntur unde
-          cumque totam quae, excepturi, optio, incidunt rem perspiciatis
-          assumenda veritatis hic minus! At?
-        </div>
+        <div className="text-xl">{post.body}</div>
       </div>
     </div>
   );
