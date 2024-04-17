@@ -1,3 +1,4 @@
+import PostUser from "@/components/postUser/postUser";
 import Image from "next/image";
 
 const getData = async (slug) => {
@@ -33,10 +34,8 @@ const SinglePostPage = async ({ params }) => {
             width={50}
             className="object-cover rounded-[50%] "
           />
-          <div className="flex flex-col gap-2">
-            <span className="text-gray-300 font-bold">Author</span>
-            <span className="font-medium">Terry Jefferson</span>
-          </div>
+          <PostUser userId={post.userId} />
+
           <div className="flex flex-col gap-2">
             <span className="">Published</span>
             <span className="">01.01.2024</span>
