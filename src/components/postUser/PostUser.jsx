@@ -17,7 +17,7 @@ const PostUser = async ({ userId }) => {
   return (
     <div className="flex flex-col gap-2">
       <span className="text-gray-300 font-bold">Author</span>
-      <span className="font-medium">Terry Jefferson</span>
+      <span className="font-medium">{user.username} </span>
     </div>
   );
 };
